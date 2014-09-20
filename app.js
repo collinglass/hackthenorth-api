@@ -4,8 +4,8 @@ var tenso  		= require( "tenso" ),
 
 var config = {
 	routes: routes,
-	hostname: "http://pacific-sands-9126.herokuapp.com/",
-	port: 80
+	hostname: "pacific-sands-9126.herokuapp.com",
+	port: process.env.PORT
 }
 
 tenso( config );
