@@ -1,0 +1,8 @@
+{
+  "name": "htn-api",
+  "main": "app.js",
+  "dependencies": {
+    "keigai": "^0.6.1",
+    "tenso": "^0.9.0"
+  }
+}
