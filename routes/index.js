@@ -1,12 +1,19 @@
-var keigai 	= require( "keigai" ),
-	store   = keigai.store();
+var keigai 		= require( "keigai" ),
+	evi   		= keigai.store(),
+	epil   		= keigai.store()
+	evi_data	= require( "../data/evi_data.json" ),
+	epil_data	= require( "../data/epil_data.json" );
 
-store.set(null, {"waddup": "homes"});
+evi.set(null, evi_data);
+epil.set(null, epil_data);
 
 module.exports.get = {
 	"/": [],
-	"/data": function( req, res ) {
-		this.respond( req, res, store.dump(), 200 );
+	"/data/evi": function( req, res ) {
+		this.respond( req, res, evi.dump(), 200 );
+	},
+	"/data/epil": function( req, res ) {
+		this.respond( req, res, epil.dump(), 200 );
 	}
 }
 
@@ -15,4 +22,3 @@ module.exports.post = {
 		this.respond( req, res, "Successful POST", 200 );
 	}
 }
-
