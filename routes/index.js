@@ -1,6 +1,12 @@
+var store   = keigai.store();
+
+store.set(null, {"waddup": "homes"});
+
 module.exports.get = {
 	"/": [],
-	"/something": "Waddup"
+	"/data": function( req, res ) {
+		this.respond( req, res, store.dump(), 200 );
+	}
 }
 
 module.exports.post = {
@@ -8,3 +14,4 @@ module.exports.post = {
 		this.respond( req, res, "Successful POST", 200 );
 	}
 }
+
