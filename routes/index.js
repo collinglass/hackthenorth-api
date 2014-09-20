@@ -1,4 +1,5 @@
-var store   = keigai.store();
+var keigai 	= require( "keigai" ),
+	store   = keigai.store();
 
 store.set(null, {"waddup": "homes"});
 
