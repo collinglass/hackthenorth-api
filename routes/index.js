@@ -21,6 +21,7 @@ module.exports.post = {
 	"/data": function( req, res ) {
 		// var body 	= JSON.parse(req.body),
 		// 	severity	= body.level;
-		this.respond( req, res, "Body: " + req.body, 200 );
+
+		this.respond( req, res, req.body, 200 );
 	}
 }
