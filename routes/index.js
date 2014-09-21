@@ -19,6 +19,8 @@ module.exports.get = {
 
 module.exports.post = {
 	"/data": function( req, res ) {
-		this.respond( req, res, "Successful POST", 200 );
+		// var body 	= JSON.parse(req.body),
+		// 	severity	= body.level;
+		this.respond( req, res, "Body: " + req.body, 200 );
 	}
 }
