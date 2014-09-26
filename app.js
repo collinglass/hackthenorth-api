@@ -1,6 +1,6 @@
 var tenso  		= require( "tenso" ),
 	routes 		= require( "./routes" ),
-	dev			= false,
+	dev			= true,
 	hostname,
 	port;
 
